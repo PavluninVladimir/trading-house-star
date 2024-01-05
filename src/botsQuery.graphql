@@ -1,0 +1,8 @@
+# import "src/graphql/types.graphql"
+
+query getBotss {
+    bots {
+        id
+        Name
+    }
+}
