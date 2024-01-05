@@ -1,0 +1,33 @@
+{
+  "name": "trading-house-star",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "compile": "graphql-codegen --config codegen.ts",
+    "watch": "graphql-codegen -w"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-codegen/typescript-vue-apollo": "^4.1.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/apollo": "^5.0.0-alpha.11",
+    "@nuxtjs/tailwindcss": "^6.10.3",
+    "@vite-pwa/nuxt": "0.4.0",
+    "@vueuse/core": "^10.7.1",
+    "@vueuse/nuxt": "^10.7.1",
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "workbox-routing": "^7.0.0",
+    "workbox-strategies": "^7.0.0"
+  }
+}
