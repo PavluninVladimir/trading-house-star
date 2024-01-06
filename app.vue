@@ -282,8 +282,8 @@ const query = gql`
     }
 }
 `
-const { data } = await useAsyncQuery<Query>(query)
-console.log(data.value.bots)
+// const { data } = await useAsyncQuery<Query>(query)
+// console.log(data.value.bots)
 const isShow = ref(true)
 // const opacity = ref(1)
 
