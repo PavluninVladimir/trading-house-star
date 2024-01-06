@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  tradinghousestar:
+    image: ghcr.io/pavluninvladimir/trading-house-star:latest
+    env_file:
+      - stack.env
+    networks:
+      - tradinghousestar
+      - proxynet
+    labels:
+      # Frontend
+      - "traefik.enable=true"
+      - "traefik.http.routers.tradinghousestar.rule=Host(`demo.${TRAEFIK_HOST}`)"
+      - "traefik.http.routers.tradinghousestar.entrypoints=https"
+      - "traefik.http.services.tradinghousestar.loadbalancer.server.port=3000"
+      - "traefik.http.routers.tradinghousestar.service=tradinghousestar"
+      - "traefik.http.routers.tradinghousestar.tls.certresolver=le"
+    ports:
+      - "3000:3000"
+
+networks:
+  tradinghousestar:
+    driver: bridge
+  proxynet:
+    name: proxynet
+    external: true
