@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   reverse-proxy:
-    image: ghcr.io/pavluninvladimir/trading-house-star:latest
+    image: trading-house-star:latest
     env_file:
       - stack.env
     networks:
